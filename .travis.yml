@@ -15,7 +15,7 @@ after_success:
   - docker build -t bgd20/multi-nginx ./nginx
   - docker build -t bgd20/multi-server ./server
   - docker build -t bgd20/multi-worker ./worker
-  # Log in to the docker CLI
+  # Log in to the docker CLI for
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push bgd20/multi-client
