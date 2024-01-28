@@ -23,13 +23,13 @@ after_success:
   - docker push bgd20/multi-server
   - docker push bgd20/multi-worker
 
-  deploy:
+deploy:
   provider: elasticbeanstalk
-  region: 'eu-central-1'
-  app: 'multi-docker'
-  env: 'Multi-docker-env'
-  bucket_name: 'elasticbeanstalk-eu-central-1-698224578948'
-  bucket_path: 'docker-multi'
+  region: "eu-central-1"
+  app: "multi-docker"
+  env: "Multi-docker-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-698224578948"
+  bucket_path: "docker-multi"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
